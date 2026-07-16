@@ -102,7 +102,7 @@ Prompt 3：根据批评意见重写摘要
 
 ## 链式提示和链式思考的关系
 
-链式提示容易和 [[06_链式思考（CoT）提示]] 混在一起，但它们关注的层面不同。
+链式提示容易和 [06_链式思考（CoT）提示](<06_链式思考（CoT）提示.md>) 混在一起，但它们关注的层面不同。
 
 **链式思考（CoT）更像是在一次回答里引导模型展开推理过程；链式提示（Prompt Chaining）更像是在多次调用之间设计一条外部工作流。**
 
@@ -113,7 +113,7 @@ Prompt 3：根据批评意见重写摘要
 
 ![CoT 和 Prompt Chaining 的区别](picture/03-cot-vs-prompt-chaining.png)
 
-更详细的对比可以放到 [[13_CoT 和 Prompt Chaining的区别]] 里复用，避免在每篇笔记里重复展开。
+更详细的对比可以放到 [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>) 里复用，避免在每篇笔记里重复展开。
 
 ## 链式提示的使用经验
 
@@ -128,5 +128,5 @@ Prompt 3：根据批评意见重写摘要
 
 ## 相关关系笔记
 
-- [[13_CoT 和 Prompt Chaining的区别]]：专门区分推理链和任务链。
-- [[00_Prompt Engineering技术关系总览]]：把 Prompt Chaining 放在流程层中，和 ReAct、Reflexion 一起比较。
+- [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>)：专门区分推理链和任务链。
+- [00_Prompt Engineering技术关系总览](<00_Prompt Engineering技术关系总览.md>)：把 Prompt Chaining 放在流程层中，和 ReAct、Reflexion 一起比较。

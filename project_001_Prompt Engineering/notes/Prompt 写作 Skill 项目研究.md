@@ -5,8 +5,8 @@
 - [yzfly/structured-prompt-skill](https://github.com/yzfly/structured-prompt-skill)
 - [ckelsoe/prompt-architect](https://github.com/ckelsoe/prompt-architect)
 - [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](https://arxiv.org/pdf/2312.16171)
-- [[26条有效提示词技巧]]
-- [[结构化 Prompt 编写指南和最佳实践]]
+- [26条有效提示词技巧](<26条有效提示词技巧.md>)
+- [结构化 Prompt 编写指南和最佳实践](<结构化 Prompt 编写指南和最佳实践.md>)
 ---
 
 ## 这几个资料分别解决什么问题？
@@ -109,12 +109,12 @@
 
 ## 和已有笔记的关系
 
-- [[02_提示词构成要素]]：新 skill 里的角色、上下文、输入、输出格式都来自这些基本要素。
-- [[03_设计提示词的通用技巧]]：新 skill 会把通用技巧变成生成前后的检查项。
-- [[26条有效提示词技巧]]：新 skill 将 26 条原则沉淀为 `principled-instructions.md`。
-- [[结构化 Prompt 编写指南和最佳实践]]：新 skill 将统一核心骨架和 9 条硬标准沉淀为 `structured-prompt-contract.md`。
-- [[09_链式提示 Prompt Chaining]]：复杂任务如果不适合一个 prompt 完成，新 skill 应该建议拆成多步，而不是硬塞进一个长 prompt。
-- [[10_ReAct 框架]]：Agent 类 prompt 会继承 ReAct 的“行动 + 观察 + 调整”思路，但更强调权限边界和停止条件。
+- [02_提示词构成要素](<02_提示词构成要素.md>)：新 skill 里的角色、上下文、输入、输出格式都来自这些基本要素。
+- [03_设计提示词的通用技巧](<03_设计提示词的通用技巧.md>)：新 skill 会把通用技巧变成生成前后的检查项。
+- [26条有效提示词技巧](<26条有效提示词技巧.md>)：新 skill 将 26 条原则沉淀为 `principled-instructions.md`。
+- [结构化 Prompt 编写指南和最佳实践](<结构化 Prompt 编写指南和最佳实践.md>)：新 skill 将统一核心骨架和 9 条硬标准沉淀为 `structured-prompt-contract.md`。
+- [09_链式提示 Prompt Chaining](<09_链式提示 Prompt Chaining.md>)：复杂任务如果不适合一个 prompt 完成，新 skill 应该建议拆成多步，而不是硬塞进一个长 prompt。
+- [10_ReAct 框架](<10_ReAct 框架.md>)：Agent 类 prompt 会继承 ReAct 的“行动 + 观察 + 调整”思路，但更强调权限边界和停止条件。
 
 ## 我的理解
 

@@ -1,8 +1,8 @@
 # CoT 和 Prompt Chaining 的区别
 ---
 参考资料：
-- [[06_链式思考（CoT）提示]]
-- [[09_链式提示 Prompt Chaining]]
+- [06_链式思考（CoT）提示](<06_链式思考（CoT）提示.md>)
+- [09_链式提示 Prompt Chaining](<09_链式提示 Prompt Chaining.md>)
 ---
 
 ## 它们的核心关系
@@ -129,4 +129,4 @@ Prompt 3：检查答案是否超出片段依据
 
 ## 相关关系笔记
 
-- [[00_Prompt Engineering技术关系总览]]：把 CoT 和 Prompt Chaining 放在推理增强层、流程编排层之间比较。
+- [00_Prompt Engineering技术关系总览](<00_Prompt Engineering技术关系总览.md>)：把 CoT 和 Prompt Chaining 放在推理增强层、流程编排层之间比较。

@@ -1,8 +1,8 @@
 # ReAct 和 Reflexion 的区别
 ---
 参考资料：
-- [[10_ReAct 框架]]
-- [[11_自我反思 Reflexion]]
+- [10_ReAct 框架](<10_ReAct 框架.md>)
+- [11_自我反思 Reflexion](<11_自我反思 Reflexion.md>)
 ---
 
 ## 它们的核心关系
@@ -132,7 +132,7 @@ Reflexion：
 
 实际设计 Agent 时，可以按这个顺序判断：
 
-- **如果任务只需要内部推理**，先考虑 [[06_链式思考（CoT）提示]]。
+- **如果任务只需要内部推理**，先考虑 [06_链式思考（CoT）提示](<06_链式思考（CoT）提示.md>)。
 - **如果任务需要调用工具或观察环境**，使用 ReAct。
 - **如果 ReAct 任务经常失败但有反馈**，加入 Reflexion。
 - **如果反思很多但行为没变化**，检查反思是否进入下一轮上下文。
@@ -150,4 +150,4 @@ Reflexion：
 
 ## 相关关系笔记
 
-- [[00_Prompt Engineering技术关系总览]]：把 ReAct 和 Reflexion 放在 Prompt Chaining、Self-Consistency 等方法旁边看，区分流程、行动和学习。
+- [00_Prompt Engineering技术关系总览](<00_Prompt Engineering技术关系总览.md>)：把 ReAct 和 Reflexion 放在 Prompt Chaining、Self-Consistency 等方法旁边看，区分流程、行动和学习。
