@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","text":"深度学习网络结构","x":62,"y":-140,"width":335,"height":57},
+		{"id":"feature1","type":"text","text":"低级特征\n(边缘、线条)","x":-520,"y":340,"width":161,"height":50},
+		{"id":"pool1","type":"text","text":"池化层 1\n降维","x":-112,"y":325,"width":174,"height":68},
+		{"id":"feature2","type":"text","text":"中级特征\n(纹理、形状)","x":149,"y":336,"width":161,"height":57},
+		{"id":"conv2","type":"text","text":"卷积层 2\n提取纹理特征","x":230,"y":110,"width":174,"height":90},
+		{"id":"pool2","type":"text","text":"池化层 2\n降维","x":480,"y":325,"width":174,"height":68},
+		{"id":"conv1","type":"text","text":"卷积层 1\n提取边缘特征","x":-260,"y":110,"width":174,"height":90},
+		{"id":"conv3","type":"text","text":"卷积层 3\n提取部件特征","x":749,"y":110,"width":174,"height":90},
+		{"id":"feature3","type":"text","text":"高级特征\n(部件、物体)","x":692,"y":336,"width":161,"height":57},
+		{"id":"fc1","type":"text","text":"全连接层 1\n特征整合","x":1000,"y":116,"width":174,"height":79},
+		{"id":"feature4","type":"text","text":"抽象特征\n(语义概念)","x":1007,"y":359,"width":161,"height":57},
+		{"id":"fc2","type":"text","text":"全连接层 2\n分类/回归","x":1240,"y":116,"width":174,"height":79},
+		{"id":"output","type":"text","text":"输出层\n(预测结果)","x":1540,"y":116,"width":174,"height":79},
+		{"id":"explain","type":"text","text":"层级化特征学习\n\n浅层：提取低级特征（边缘、颜色）\n中层：组合成纹理、形状\n高层：识别部件、物体部件\n顶层：抽象语义理解","x":0,"y":520,"width":536,"height":160},
+		{"id":"input","type":"text","text":"输入层\n(图像/文本/音频)","x":-520,"y":111,"width":174,"height":90}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"input","fromSide":"right","toNode":"conv1","toSide":"left"},
+		{"id":"e6","fromNode":"conv3","fromSide":"right","toNode":"fc1","toSide":"left"},
+		{"id":"e7","fromNode":"fc1","fromSide":"right","toNode":"fc2","toSide":"left"},
+		{"id":"e8","fromNode":"fc2","fromSide":"right","toNode":"output","toSide":"left"},
+		{"id":"e9","fromNode":"conv1","fromSide":"bottom","toNode":"feature1","toSide":"top"},
+		{"id":"e10","fromNode":"conv2","fromSide":"bottom","toNode":"feature2","toSide":"top"},
+		{"id":"e11","fromNode":"conv3","fromSide":"bottom","toNode":"feature3","toSide":"top"},
+		{"id":"e12","fromNode":"fc1","fromSide":"bottom","toNode":"feature4","toSide":"top"},
+		{"id":"392d03d88850d9f1","fromNode":"pool1","fromSide":"top","toNode":"conv2","toSide":"left"},
+		{"id":"6ccffaa9df10d39e","fromNode":"conv1","fromSide":"bottom","toNode":"pool1","toSide":"left"},
+		{"id":"6ddb9913eb35e1e2","fromNode":"conv2","fromSide":"bottom","toNode":"pool2","toSide":"left"},
+		{"id":"d6d6addd8050cbc9","fromNode":"pool2","fromSide":"top","toNode":"conv3","toSide":"left"}
+	]
+}

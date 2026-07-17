@@ -1,0 +1,43 @@
+{
+	"nodes":[
+		{"id":"hidden1","type":"text","text":"隐藏层\n神经元 1","x":250,"y":0,"width":110,"height":50},
+		{"id":"hidden2","type":"text","text":"隐藏层\n神经元 2","x":250,"y":80,"width":110,"height":50},
+		{"id":"hidden3","type":"text","text":"隐藏层\n神经元 3","x":250,"y":160,"width":110,"height":50},
+		{"id":"hidden4","type":"text","text":"隐藏层\n神经元 4","x":250,"y":240,"width":110,"height":50},
+		{"id":"label_hidden","type":"text","text":"隐藏层","x":250,"y":-60,"width":110,"height":50},
+		{"id":"input1","type":"text","text":"输入 x₁","x":-80,"y":58,"width":120,"height":50},
+		{"id":"input3","type":"text","text":"输入 x₃","x":-80,"y":203,"width":120,"height":50},
+		{"id":"input2","type":"text","text":"输入 x₂","x":-80,"y":133,"width":120,"height":50},
+		{"id":"label_input","type":"text","text":"输入层","x":-80,"y":-7,"width":110,"height":50},
+		{"id":"label_output","type":"text","text":"输出层","x":585,"y":-9,"width":90,"height":50},
+		{"id":"output1","type":"text","text":"输出 y₁","x":580,"y":56,"width":105,"height":50},
+		{"id":"output3","type":"text","text":"输出 y₃","x":580,"y":201,"width":100,"height":55},
+		{"id":"output2","type":"text","text":"输出 y₂","x":580,"y":131,"width":100,"height":50}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"input1","fromSide":"right","toNode":"hidden1","toSide":"left"},
+		{"id":"e2","fromNode":"input1","fromSide":"right","toNode":"hidden2","toSide":"left"},
+		{"id":"e3","fromNode":"input1","fromSide":"right","toNode":"hidden3","toSide":"left"},
+		{"id":"e4","fromNode":"input1","fromSide":"right","toNode":"hidden4","toSide":"left"},
+		{"id":"e5","fromNode":"input2","fromSide":"right","toNode":"hidden1","toSide":"left"},
+		{"id":"e6","fromNode":"input2","fromSide":"right","toNode":"hidden2","toSide":"left"},
+		{"id":"e7","fromNode":"input2","fromSide":"right","toNode":"hidden3","toSide":"left"},
+		{"id":"e8","fromNode":"input2","fromSide":"right","toNode":"hidden4","toSide":"left"},
+		{"id":"e9","fromNode":"input3","fromSide":"right","toNode":"hidden1","toSide":"left"},
+		{"id":"e10","fromNode":"input3","fromSide":"right","toNode":"hidden2","toSide":"left"},
+		{"id":"e11","fromNode":"input3","fromSide":"right","toNode":"hidden3","toSide":"left"},
+		{"id":"e12","fromNode":"input3","fromSide":"right","toNode":"hidden4","toSide":"left"},
+		{"id":"e13","fromNode":"hidden1","fromSide":"right","toNode":"output1","toSide":"left"},
+		{"id":"e14","fromNode":"hidden1","fromSide":"right","toNode":"output2","toSide":"left"},
+		{"id":"e15","fromNode":"hidden1","fromSide":"right","toNode":"output3","toSide":"left"},
+		{"id":"e16","fromNode":"hidden2","fromSide":"right","toNode":"output1","toSide":"left"},
+		{"id":"e17","fromNode":"hidden2","fromSide":"right","toNode":"output2","toSide":"left"},
+		{"id":"e18","fromNode":"hidden2","fromSide":"right","toNode":"output3","toSide":"left"},
+		{"id":"e19","fromNode":"hidden3","fromSide":"right","toNode":"output1","toSide":"left"},
+		{"id":"e20","fromNode":"hidden3","fromSide":"right","toNode":"output2","toSide":"left"},
+		{"id":"e21","fromNode":"hidden3","fromSide":"right","toNode":"output3","toSide":"left"},
+		{"id":"e22","fromNode":"hidden4","fromSide":"right","toNode":"output1","toSide":"left"},
+		{"id":"e23","fromNode":"hidden4","fromSide":"right","toNode":"output2","toSide":"left"},
+		{"id":"e24","fromNode":"hidden4","fromSide":"right","toNode":"output3","toSide":"left"}
+	]
+}

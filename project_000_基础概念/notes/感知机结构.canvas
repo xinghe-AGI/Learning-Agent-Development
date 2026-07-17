@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"input_x1","type":"text","text":"输入 x₁","x":0,"y":33,"width":108,"height":67},
+		{"id":"input_x2","type":"text","text":"输入 x₂","x":0,"y":167,"width":108,"height":67},
+		{"id":"weight_w1","type":"text","text":"权重 w₁","x":135,"y":42,"width":95,"height":50},
+		{"id":"weight_w2","type":"text","text":"权重 w₂","x":135,"y":175,"width":95,"height":50},
+		{"id":"sum_node","type":"text","text":"加权求和\nΣ","x":326,"y":75,"width":108,"height":100},
+		{"id":"bias","type":"text","text":"+ 偏置 b","x":500,"y":96,"width":135,"height":58},
+		{"id":"activation","type":"text","text":"激活函数\nf()","x":660,"y":75,"width":108,"height":100},
+		{"id":"output","type":"text","text":"输出 ŷ","x":860,"y":92,"width":108,"height":67},
+		{"id":"formula","type":"text","text":"公式:\nŷ = f(w₁x₁ + w₂x₂ + b)","x":365,"y":234,"width":271,"height":100},
+		{"id":"title","type":"text","text":"感知机 (Perceptron)","x":364,"y":-60,"width":271,"height":67}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"input_x1","fromSide":"right","toNode":"weight_w1","toSide":"left"},
+		{"id":"e2","fromNode":"input_x2","fromSide":"right","toNode":"weight_w2","toSide":"left"},
+		{"id":"e3","fromNode":"weight_w1","fromSide":"right","toNode":"sum_node","toSide":"left"},
+		{"id":"e4","fromNode":"weight_w2","fromSide":"right","toNode":"sum_node","toSide":"left"},
+		{"id":"e5","fromNode":"sum_node","fromSide":"right","toNode":"bias","toSide":"left"},
+		{"id":"e6","fromNode":"bias","fromSide":"right","toNode":"activation","toSide":"left"},
+		{"id":"e7","fromNode":"activation","fromSide":"right","toNode":"output","toSide":"left"}
+	]
+}
