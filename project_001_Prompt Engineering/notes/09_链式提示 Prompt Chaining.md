@@ -113,8 +113,6 @@ Prompt 3：根据批评意见重写摘要
 
 ![CoT 和 Prompt Chaining 的区别](picture/03-cot-vs-prompt-chaining.png)
 
-更详细的对比可以放到 [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>) 里复用，避免在每篇笔记里重复展开。
-
 ## 链式提示的使用经验
 
 - **先画链路，再写 prompt**：先确定每一步的输入、输出和责任，再写具体提示词。
@@ -128,5 +126,4 @@ Prompt 3：根据批评意见重写摘要
 
 ## 相关关系笔记
 
-- [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>)：专门区分推理链和任务链。
 - [00_Prompt Engineering技术关系总览](<00_Prompt Engineering技术关系总览.md>)：把 Prompt Chaining 放在流程层中，和 ReAct、Reflexion 一起比较。

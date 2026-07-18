@@ -62,10 +62,7 @@ pip install langchain==1.2.1 langchain-openai==1.1.6 langgraph==1.0.2 concurrent
 │   ├── models.py                    # Context 和结构化响应模型
 │   └── logger.py                    # 日志配置
 └── notes/                           # 项目学习笔记
-    ├── ChatPromptTemplate详解.md
-    ├── invoke 方法参数详解.md
-    ├── stream方法参数详解.md
-    └── 项目对比分析.md
+    └── ChatPromptTemplate详解.md
 ```
 
 ## 运行项目
@@ -83,6 +80,3 @@ python agent.py
 ## 学习笔记
 
 - [PromptTemplate 与 ChatPromptTemplate 使用方法](<notes/ChatPromptTemplate详解.md>)
-- [Agent invoke 方法参数详解](<notes/invoke 方法参数详解.md>)
-- [Agent stream 方法参数详解](<notes/stream方法参数详解.md>)
-- [项目对比分析](<notes/项目对比分析.md>)
