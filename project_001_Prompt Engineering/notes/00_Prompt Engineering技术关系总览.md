@@ -13,6 +13,13 @@
 - [09_链式提示 Prompt Chaining](<09_链式提示 Prompt Chaining.md>)
 - [10_ReAct 框架](<10_ReAct 框架.md>)
 - [11_自我反思 Reflexion](<11_自我反思 Reflexion.md>)
+- [12_零样本提示和少样本提示的关系](<12_零样本提示和少样本提示的关系.md>)
+- [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>)
+- [14_ReAct 和 Reflexion的区别](<14_ReAct 和 Reflexion的区别.md>)
+- [15_CoT 和 ToT的区别](<15_CoT 和 ToT的区别.md>)
+- [16_CoT 和自我一致性的区别](<16_CoT 和自我一致性的区别.md>)
+- [17_Prompt Chaining 和 ReAct的区别](<17_Prompt Chaining 和 ReAct的区别.md>)
+- [18_自我一致性和 Reflexion的区别](<18_自我一致性和 Reflexion的区别.md>)
 
 ![提示工程技术关系总览](picture/16-prompt-tech-relations-overview.png)
 
@@ -55,27 +62,15 @@
 
 ## 容易连在一起看的关系
 
-| 关系 | 共同点 | 关键区别 | 适用判断 |
-| --- | --- | --- | --- |
-| 零样本提示 vs 少样本提示 | 都通过当前 prompt 描述任务，不修改模型参数 | 零样本只提供指令和上下文；少样本额外提供输入输出示例 | 先用零样本建立基线；模型不理解隐含标准、标签边界或固定格式时再加少样本 |
-| CoT vs ToT | 都通过展开中间过程增强复杂推理 | CoT 沿一条路线逐步推理；ToT 同时探索、评估和回溯多条分支 | 路线明确但容易跳步时用 CoT；方向不确定、需要比较候选路线时用 ToT |
-| CoT vs 自我一致性 | 都可以生成推理链 | CoT 关注一条推理链是否完整；自我一致性生成多条独立推理链并对最终答案投票 | 单次推理缺步骤时先用 CoT；同一问题多次答案波动时再叠加自我一致性 |
-| CoT vs Prompt Chaining | 都会把复杂问题拆成步骤 | CoT 是一次模型回答内部的推理步骤；Prompt Chaining 是多次模型调用或多个处理节点之间的任务流 | 只需改善单次推理时用 CoT；需要中间结果、阶段校验或模块复用时用 Prompt Chaining |
-| Prompt Chaining vs ReAct | 都能组织多步骤任务 | Prompt Chaining 的流程由开发者预先编排；ReAct 由 Agent 根据 Observation 动态决定下一步行动 | 流程稳定、步骤已知时用 Prompt Chaining；行动依赖实时工具反馈时用 ReAct |
-| ReAct vs Reflexion | 都用于提高 Agent 完成复杂任务的能力 | ReAct 管理当前一次任务中的推理和行动循环；Reflexion 把失败反馈转成记忆，影响下一次尝试 | 需要边观察边执行时用 ReAct；任务允许重试且有可靠反馈时再加入 Reflexion |
-| 自我一致性 vs Reflexion | 都通过多次尝试提高可靠性 | 自我一致性并行采样后投票，不改变后续策略；Reflexion 串行接收反馈、形成反思并调整下一次策略 | 有明确唯一答案、适合投票时用自我一致性；需要根据失败原因逐次改进时用 Reflexion |
-
-## 几组容易混淆的点
-
-**CoT 和自我一致性不是同一个层级。** CoT 是让模型展开一次推理，自我一致性是让模型展开多次推理并聚合答案。前者提升“单次推理可见度”，后者提升“结果稳定性”。
-
-**ToT 和自我一致性都涉及多个候选，但动作不同。** 自我一致性通常是多次独立生成完整推理链，再对最终答案投票；ToT 会在中间状态就评估分支，决定继续扩展、淘汰还是回溯。
-
-**Prompt Chaining 和 ReAct 都是多步骤，但控制权不同。** Prompt Chaining 的步骤一般由开发者提前设计好；ReAct 的下一步行动由模型根据 Observation 动态决定。前者更像流程编排，后者更像现场执行。
-
-**Reflexion 和自我一致性都在提高可靠性，但时间尺度不同。** 自我一致性是在同一个问题上并行多采样，选出更稳定的答案；Reflexion 是在一次失败之后生成反思，把经验带到下一次尝试。
-
-**模型设置和提示技术要一起看。** 如果输出只是太随机、太长或太重复，先调参数可能比重写 prompt 更快；如果模型误解任务、缺少边界或推理跳步，再升级提示结构或提示技术。
+| 关系 | 关键区别 | 复习入口 |
+| --- | --- | --- |
+| 零样本提示 vs 少样本提示 | 是否在 prompt 中提供输入输出示例 | [12_零样本提示和少样本提示的关系](<12_零样本提示和少样本提示的关系.md>) |
+| CoT vs ToT | 一条线性推理链 vs 多分支搜索树 | [15_CoT 和 ToT的区别](<15_CoT 和 ToT的区别.md>) |
+| CoT vs 自我一致性 | 做一条推理链 vs 多条推理链投票 | [16_CoT 和自我一致性的区别](<16_CoT 和自我一致性的区别.md>) |
+| CoT vs Prompt Chaining | 单次回答内部的推理链 vs 多次调用之间的任务链 | [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>) |
+| Prompt Chaining vs ReAct | 开发者预先编排流程 vs Agent 根据观察动态选择行动 | [17_Prompt Chaining 和 ReAct的区别](<17_Prompt Chaining 和 ReAct的区别.md>) |
+| ReAct vs Reflexion | 当前任务里的行动循环 vs 多次尝试之间的经验学习 | [14_ReAct 和 Reflexion的区别](<14_ReAct 和 Reflexion的区别.md>) |
+| 自我一致性 vs Reflexion | 并行多次采样后投票 vs 串行失败反馈后改进 | [18_自我一致性和 Reflexion的区别](<18_自我一致性和 Reflexion的区别.md>) |
 
 ## 一个简化判断表
 

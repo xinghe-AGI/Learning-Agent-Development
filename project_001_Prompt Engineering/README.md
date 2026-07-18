@@ -24,6 +24,13 @@
 ## 技术关联/区别/对比
 
 - [00_Prompt Engineering 技术关系总览](<notes/00_Prompt Engineering技术关系总览.md>)
+- [12_零样本提示和少样本提示的关系](<notes/12_零样本提示和少样本提示的关系.md>)
+- [13_CoT 和 Prompt Chaining 的区别](<notes/13_CoT 和 Prompt Chaining的区别.md>)
+- [14_ReAct 和 Reflexion 的区别](<notes/14_ReAct 和 Reflexion的区别.md>)
+- [15_CoT 和 ToT 的区别](<notes/15_CoT 和 ToT的区别.md>)
+- [16_CoT 和自我一致性的区别](<notes/16_CoT 和自我一致性的区别.md>)
+- [17_Prompt Chaining 和 ReAct 的区别](<notes/17_Prompt Chaining 和 ReAct的区别.md>)
+- [18_自我一致性和 Reflexion 的区别](<notes/18_自我一致性和 Reflexion的区别.md>)
 
 ## 最佳实践
 

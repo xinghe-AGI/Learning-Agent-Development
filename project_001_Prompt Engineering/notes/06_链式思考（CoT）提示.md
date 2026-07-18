@@ -154,4 +154,7 @@ CoT 适合那些“答案不是一步能直接得出”的任务。
 
 ## 相关关系笔记
 
+- [13_CoT 和 Prompt Chaining的区别](<13_CoT 和 Prompt Chaining的区别.md>)：区分一次回答内部的推理链和多次调用之间的任务链。
+- [15_CoT 和 ToT的区别](<15_CoT 和 ToT的区别.md>)：区分线性推理和多分支搜索。
+- [16_CoT 和自我一致性的区别](<16_CoT 和自我一致性的区别.md>)：区分单条推理链和多条推理链投票。
 - [00_Prompt Engineering技术关系总览](<00_Prompt Engineering技术关系总览.md>)：把 CoT 放回推理增强层中，和 ToT、自我一致性一起比较。
