@@ -32,20 +32,19 @@
 ## 最佳实践
 
 - [26条有效提示词技巧](<notes/26条有效提示词技巧.md>)
-- [结构化 Prompt 编写指南和最佳实践](<notes/结构化 Prompt 编写指南和最佳实践.md>)
-- [Prompt 写作 Skill 项目研究](<notes/Prompt 写作 Skill 项目研究.md>)
+- [AI Prompt Writer 自适应 Prompt 编写方法](<notes/AI Prompt Writer 自适应 Prompt 编写方法.md>)
+
+## 编写 Prompt Skill
+
+- [Agent Prompt Writer](https://github.com/xinghe-AGI/Agent-Prompt-Writer)
+
+## 项目实践
+
+- [Prompt Template 学习项目](<code/02_Study_PromptTemplate/README.md>)：学习系统 Prompt、用户 Prompt、模板变量、动态传参以及 Agent 加载 Prompt 的完整过程。
 
 ## 参考资料
 
 - [提示工程指南](https://www.promptingguide.ai/zh)
-- [结构化 Prompt 编写指南和最佳实践](https://github.com/NanGePlus/PromptsCollection)
+- [NanGePlus/PromptsCollection](https://github.com/NanGePlus/PromptsCollection)
 - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
 - [Anthropic Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-
-## 项目实践
-
-实际项目结合 LangChain 开发。
-
-- [BV1HZouY5EPs](https://www.bilibili.com/video/BV1HZouY5EPs?spm_id_from=333.788.videopod.sections&vd_source=bd7ed8a7e9d039ea56c8fdf0cae0d842)
-- [BV11P5BzNEq3](https://www.bilibili.com/video/BV11P5BzNEq3?spm_id_from=333.788.videopod.sections&vd_source=bd7ed8a7e9d039ea56c8fdf0cae0d842)
-- [BV1th69BAEdA](https://www.bilibili.com/video/BV1th69BAEdA/?spm_id_from=333.1387.search.video_card.click&vd_source=bd7ed8a7e9d039ea56c8fdf0cae0d842)
