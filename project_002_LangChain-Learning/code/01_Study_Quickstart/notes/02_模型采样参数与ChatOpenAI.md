@@ -178,7 +178,7 @@ response = creative_model.invoke(
 )
 ```
 
-`bind()` 不会修改原来的 `model`，而是返回一个绑定了额外参数的新 Runnable。它适合直接模型调用或 LCEL 链；完整的 `ChatOpenAI` 对象与 Agent 装配边界见 [[10_ChatOpenAI对象详解]]。
+`bind()` 不会修改原来的 `model`，而是返回一个绑定了额外参数的新 Runnable。它适合直接模型调用或 LCEL 链；完整的 `ChatOpenAI` 对象与 Agent 装配边界见 [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)。
 
 ### `invoke()`：只覆盖本次直接模型调用
 
@@ -204,7 +204,7 @@ response = model.invoke(
 - 先固定 Prompt、工具、模型版本和测试输入，只改变一个参数。
 - `temperature` 与 `top_p` 先选择一个调整，避免无法判断变化来源。
 - 工具选择不稳定时，先检查模型能力、工具名、描述和参数 Schema。
-- 结构化输出中断时，检查结束原因和输出 Token 上限，进一步排查见 [[03_结构化输出]]。
+- 结构化输出中断时，检查结束原因和输出 Token 上限，进一步排查见 [03_结构化输出](<03_结构化输出.md>)。
 - `seed` 只能帮助近似复现，不能跨模型版本、Provider 和部署环境保证完全一致。
 - 不同模型可能拒绝不支持的参数，OpenAI-compatible 不等于所有扩展字段都兼容。
 
@@ -212,8 +212,8 @@ response = model.invoke(
 
 ## 相关学习笔记
 
-- [[project_001_Prompt Engineering/notes/01_大预言模型设置|大语言模型设置]]：从 Prompt Engineering 角度理解参数直觉和任务选择。
-- [[10_ChatOpenAI对象详解]]：查看 `ChatOpenAI` 的完整构造参数、调用参数和返回对象。
-- [[03_结构化输出]]：理解输出长度、截断与 Schema 校验的关系。
-- [[04_Tools与FunctionCalling]]：理解工具调用稳定性不只由采样参数决定。
-- [[07_模型请求与响应结构]]：观察参数最终怎样进入请求，以及 usage 和结束原因怎样出现在响应中。
+- [大语言模型设置](<../../../../project_001_Prompt Engineering/notes/01_大预言模型设置.md>)：从 Prompt Engineering 角度理解参数直觉和任务选择。
+- [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)：查看 `ChatOpenAI` 的完整构造参数、调用参数和返回对象。
+- [03_结构化输出](<03_结构化输出.md>)：理解输出长度、截断与 Schema 校验的关系。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解工具调用稳定性不只由采样参数决定。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：观察参数最终怎样进入请求，以及 usage 和结束原因怎样出现在响应中。

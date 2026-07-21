@@ -98,11 +98,11 @@ ProviderStrategy 的关键路径是：
 
 OpenAI 原生结构化输出常见于 `response_format=json_schema` 或 Responses API 的 `text.format`。在 LangChain 中，ProviderStrategy 相当于让 integration 代替业务代码组装这些底层参数。
 
-底层 API 的具体写法可以参考 [[13_OpenAI API结构化输出]]。ProviderStrategy 的学习重点不在于背诵 API 字段，而在于判断当前模型服务是否真的具备原生结构化输出能力。
+底层 API 的具体写法可以参考 [13_OpenAI API结构化输出](<13_OpenAI API结构化输出.md>)。ProviderStrategy 的学习重点不在于背诵 API 字段，而在于判断当前模型服务是否真的具备原生结构化输出能力。
 
 ## 和其他笔记的关系
 
-- [[03_结构化输出]]：查看当前项目中 `response_format` 的位置。
-- [[14_ToolStrategy详解]]：理解工具调用路线如何生成结构化结果。
-- [[16_ToolStrategy和ProviderStrategy区别]]：比较两种策略的选择条件和失败形态。
-- [[17_结构化输出失败原因与处理]]：排查 Provider 原生结构化输出不可用、Schema 不兼容和 strict 失败。
+- [03_结构化输出](<03_结构化输出.md>)：查看当前项目中 `response_format` 的位置。
+- [14_ToolStrategy详解](<14_ToolStrategy详解.md>)：理解工具调用路线如何生成结构化结果。
+- [16_ToolStrategy和ProviderStrategy区别](<16_ToolStrategy和ProviderStrategy区别.md>)：比较两种策略的选择条件和失败形态。
+- [17_结构化输出失败原因与处理](<17_结构化输出失败原因与处理.md>)：排查 Provider 原生结构化输出不可用、Schema 不兼容和 strict 失败。

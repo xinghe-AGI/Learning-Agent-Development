@@ -199,7 +199,7 @@ detailed_record = build_response_record(
 - 即使本 Agent 没有使用 `llm_embedding`，初始化函数仍要求 Embedding 的 URL、Key 和模型名完整，否则启动阶段会失败。
 - 非默认模型初始化失败时，`get_llm()` 会尝试回退到默认的 `qwen`；默认配置也失败时才继续抛出异常。
 
-更详细的 Provider 与初始化区别见 [[01_多厂商LLM集成与API协议]]。
+更详细的 Provider 与初始化区别见 [01_多厂商LLM集成与API协议](<01_多厂商LLM集成与API协议.md>)。
 
 ## 阅读当前代码时还要留意什么
 

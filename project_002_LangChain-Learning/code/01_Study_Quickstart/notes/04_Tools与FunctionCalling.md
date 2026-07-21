@@ -163,7 +163,7 @@ def get_weather_for_location(city: str) -> str:
 | `ToolMessage`          | 工具执行后的返回内容  | 必须与某次工具调用关联      |
 | `structured_response`  | 最终业务对象      | 结构化输出结果，不是工具结果本身 |
 
-完整消息结构可参考 [[07_模型请求与响应结构]]。
+完整消息结构可参考 [07_模型请求与响应结构](<07_模型请求与响应结构.md>)。
 
 ## call ID 的作用
 
@@ -258,7 +258,7 @@ call ID 在并行工具调用时尤其重要。多个工具同时执行后，不
 | 结构化输出 | `WeatherResponseFormat` | 规定最终回答应具有哪些字段 |
 | ToolStrategy 结构化工具 | `ToolStrategy(WeatherResponseFormat)` 显式启用时由 LangChain 创建 | 让模型通过工具调用形式提交最终结构化结果 |
 
-业务工具通常会执行真实业务逻辑。结构化输出工具不应被理解为天气查询函数，它只是承载最终字段的一种机制。相关细节可以参考 [[14_ToolStrategy详解]]。
+业务工具通常会执行真实业务逻辑。结构化输出工具不应被理解为天气查询函数，它只是承载最终字段的一种机制。相关细节可以参考 [14_ToolStrategy详解](<14_ToolStrategy详解.md>)。
 
 ## 生产使用经验
 
@@ -272,11 +272,11 @@ call ID 在并行工具调用时尤其重要。多个工具同时执行后，不
 
 ## 相关学习笔记
 
-- [[07_模型请求与响应结构]]：查看 `AIMessage.tool_calls`、`ToolMessage`、usage 和 finish reason。
-- [[03_结构化输出]]：理解 `response_format`、结构化输出和业务工具的边界。
-- [[14_ToolStrategy详解]]：理解结构化输出怎样借用工具调用机制。
-- [[16_ToolStrategy和ProviderStrategy区别]]：区分工具调用结构化输出和 Provider 原生结构化输出。
-- [[05_create_agent参数详解]]：查看 `tools` 怎样进入 Agent 装配。
-- [[06_Agent短期记忆]]：理解工具调用结果如何进入线程消息状态。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：查看 `AIMessage.tool_calls`、`ToolMessage`、usage 和 finish reason。
+- [03_结构化输出](<03_结构化输出.md>)：理解 `response_format`、结构化输出和业务工具的边界。
+- [14_ToolStrategy详解](<14_ToolStrategy详解.md>)：理解结构化输出怎样借用工具调用机制。
+- [16_ToolStrategy和ProviderStrategy区别](<16_ToolStrategy和ProviderStrategy区别.md>)：区分工具调用结构化输出和 Provider 原生结构化输出。
+- [05_create_agent参数详解](<05_create_agent参数详解.md>)：查看 `tools` 怎样进入 Agent 装配。
+- [06_Agent短期记忆](<06_Agent短期记忆.md>)：理解工具调用结果如何进入线程消息状态。
 
 **最终记忆：Function Calling 不是让模型执行函数，而是让模型生成函数调用意图；真正执行工具、校验权限、处理错误和回传结果的是业务系统或 Agent runtime。**

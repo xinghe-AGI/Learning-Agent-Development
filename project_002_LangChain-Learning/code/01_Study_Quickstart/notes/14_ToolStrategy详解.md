@@ -117,7 +117,7 @@ response_format=ToolStrategy(
 )
 ```
 
-错误原因和处理顺序可以参考 [[17_结构化输出失败原因与处理]]。
+错误原因和处理顺序可以参考 [17_结构化输出失败原因与处理](<17_结构化输出失败原因与处理.md>)。
 
 ## 适合使用 ToolStrategy 的场景
 
@@ -135,7 +135,7 @@ response_format=ToolStrategy(
 
 ## 和其他笔记的关系
 
-- [[03_结构化输出]]：查看当前项目怎样把 Schema 接入 `create_agent()`。
-- [[15_ProviderStrategy详解]]：理解 Provider 原生结构化输出路线。
-- [[16_ToolStrategy和ProviderStrategy区别]]：判断何时使用 ToolStrategy，何时使用 ProviderStrategy。
-- [[04_Tools与FunctionCalling]]：理解工具调用、工具结果和 `tool_call_id` 的基础协议。
+- [03_结构化输出](<03_结构化输出.md>)：查看当前项目怎样把 Schema 接入 `create_agent()`。
+- [15_ProviderStrategy详解](<15_ProviderStrategy详解.md>)：理解 Provider 原生结构化输出路线。
+- [16_ToolStrategy和ProviderStrategy区别](<16_ToolStrategy和ProviderStrategy区别.md>)：判断何时使用 ToolStrategy，何时使用 ProviderStrategy。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解工具调用、工具结果和 `tool_call_id` 的基础协议。

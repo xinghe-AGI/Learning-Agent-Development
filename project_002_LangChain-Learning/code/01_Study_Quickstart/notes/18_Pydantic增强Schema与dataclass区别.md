@@ -223,7 +223,7 @@ response_format=ProviderStrategy(
 )
 ```
 
-具体选择 ToolStrategy 还是 ProviderStrategy，可以参考 [[16_ToolStrategy和ProviderStrategy区别]]。
+具体选择 ToolStrategy 还是 ProviderStrategy，可以参考 [16_ToolStrategy和ProviderStrategy区别](<16_ToolStrategy和ProviderStrategy区别.md>)。
 
 ## 当前项目如果要升级
 
@@ -278,10 +278,10 @@ response_format=WeatherResponseFormat
 
 ## 和其他笔记的关系
 
-- [[12_Schema基础概念]]：理解 Schema、数据实例、必填、可空和可省略。
-- [[03_结构化输出]]：理解 Schema 怎样进入 `create_agent(response_format=...)`。
-- [[14_ToolStrategy详解]]：理解 Pydantic Schema 怎样走工具调用路线。
-- [[15_ProviderStrategy详解]]：理解 Pydantic Schema 怎样走 Provider 原生路线。
-- [[17_结构化输出失败原因与处理]]：排查字段校验失败、Provider 不支持和业务校验失败。
+- [12_Schema基础概念](<12_Schema基础概念.md>)：理解 Schema、数据实例、必填、可空和可省略。
+- [03_结构化输出](<03_结构化输出.md>)：理解 Schema 怎样进入 `create_agent(response_format=...)`。
+- [14_ToolStrategy详解](<14_ToolStrategy详解.md>)：理解 Pydantic Schema 怎样走工具调用路线。
+- [15_ProviderStrategy详解](<15_ProviderStrategy详解.md>)：理解 Pydantic Schema 怎样走 Provider 原生路线。
+- [17_结构化输出失败原因与处理](<17_结构化输出失败原因与处理.md>)：排查字段校验失败、Provider 不支持和业务校验失败。
 
 **最终记忆：dataclass 适合快速声明结构，Pydantic 适合生产级 Schema 契约；二者都只是 Schema 来源，真正的结构化输出路线仍由 ToolStrategy、ProviderStrategy 或自动策略决定。**

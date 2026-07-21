@@ -42,7 +42,7 @@ logger.info(f"北京Agent首次回复是: {response['structured_response']}")
 logger.info(f"北京Agent首次调用记录是: {build_response_record(response)}")
 ```
 
-本地日志记录的是项目整理后的摘要，不等于 LangSmith trace，也不等于 Provider 原始响应。消息结构和响应字段的详细关系可以参考 [[07_模型请求与响应结构]]。
+本地日志记录的是项目整理后的摘要，不等于 LangSmith trace，也不等于 Provider 原始响应。消息结构和响应字段的详细关系可以参考 [07_模型请求与响应结构](<07_模型请求与响应结构.md>)。
 
 ## LangSmith 怎样启用
 
@@ -327,10 +327,10 @@ latency_ms = round((perf_counter() - started_at) * 1000)
 
 ## 相关学习笔记
 
-- [[07_模型请求与响应结构]]：理解 `messages`、`AIMessage`、`ToolMessage`、usage 和 finish reason 的来源。
-- [[04_Tools与FunctionCalling]]：理解工具调用意图、工具执行和 `tool_call_id`。
-- [[03_结构化输出]]：理解 `structured_response` 和结构化输出策略。
-- [[05_create_agent参数详解]]：理解 `agent.invoke()`、`config`、`context` 和 Agent runtime。
-- [[06_Agent短期记忆]]：理解 `thread_id` 与短期记忆状态。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：理解 `messages`、`AIMessage`、`ToolMessage`、usage 和 finish reason 的来源。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解工具调用意图、工具执行和 `tool_call_id`。
+- [03_结构化输出](<03_结构化输出.md>)：理解 `structured_response` 和结构化输出策略。
+- [05_create_agent参数详解](<05_create_agent参数详解.md>)：理解 `agent.invoke()`、`config`、`context` 和 Agent runtime。
+- [06_Agent短期记忆](<06_Agent短期记忆.md>)：理解 `thread_id` 与短期记忆状态。
 
 **最终记忆：LangSmith 负责观察完整链路，本地调用记录负责沉淀业务摘要。调试 Agent 时先看 Trace 定位步骤，再用本地记录固化模型、输入、输出、usage、finish reason 和工具调用摘要。**

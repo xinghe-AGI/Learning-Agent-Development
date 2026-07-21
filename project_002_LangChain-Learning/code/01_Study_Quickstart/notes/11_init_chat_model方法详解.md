@@ -202,7 +202,7 @@ llm = init_chat_model(
 - Provider 专属参数应查最终具体模型类，而不是只查工厂函数。
 - 工厂不会替你转换不兼容的参数名称或语义。
 
-`ChatOpenAI` 支持的参数见 [[10_ChatOpenAI对象详解]]。
+`ChatOpenAI` 支持的参数见 [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)。
 
 ## 当前项目与工厂写法的关系
 
@@ -503,5 +503,5 @@ response = model_with_tools.invoke(
 
 ## 关联笔记
 
-- [[10_ChatOpenAI对象详解]]：理解本项目最终创建的具体 `ChatOpenAI` 对象。
-- [[09_ChatOpenAI与init_chat_model的区别]]：比较直接创建具体类与使用工厂。
+- [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)：理解本项目最终创建的具体 `ChatOpenAI` 对象。
+- [09_ChatOpenAI与init_chat_model的区别](<09_ChatOpenAI与init_chat_model的区别.md>)：比较直接创建具体类与使用工厂。

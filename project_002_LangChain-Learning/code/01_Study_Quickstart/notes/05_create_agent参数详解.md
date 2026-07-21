@@ -141,7 +141,7 @@ agent = create_agent(
 
 `tools=None` 或空列表时，Agent 仍然可以调用模型，但不会进入工具调用循环。带工具的 Agent 能支持顺序调用、并行调用、动态工具选择、工具错误处理和工具结果写回消息状态。
 
-工具定义、`AIMessage.tool_calls`、`ToolMessage.tool_call_id` 的细节可以参考 [[04_Tools与FunctionCalling]]。
+工具定义、`AIMessage.tool_calls`、`ToolMessage.tool_call_id` 的细节可以参考 [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)。
 
 ## system_prompt：静态系统规则
 
@@ -189,7 +189,7 @@ response_format=WeatherResponseFormat
 response["structured_response"]
 ```
 
-结构化输出不是普通工具返回值。业务工具负责获取信息，`response_format` 负责定义最终业务对象。相关细节可以参考 [[03_结构化输出]]、[[14_ToolStrategy详解]] 和 [[15_ProviderStrategy详解]]。
+结构化输出不是普通工具返回值。业务工具负责获取信息，`response_format` 负责定义最终业务对象。相关细节可以参考 [03_结构化输出](<03_结构化输出.md>)、[14_ToolStrategy详解](<14_ToolStrategy详解.md>) 和 [15_ProviderStrategy详解](<15_ProviderStrategy详解.md>)。
 
 ## context_schema：本次运行注入的上下文
 
@@ -243,7 +243,7 @@ config1 = {"configurable": {"thread_id": "1"}}
 | 有 `checkpointer`，但每次使用不同 `thread_id` | 不同线程隔离 |
 | 没有 `checkpointer` | 本地运行通常不能跨调用恢复线程状态 |
 
-`InMemorySaver` 适合学习和本地实验。生产环境应使用持久化 checkpointer，并设计用户归属、权限校验、历史清理和数据保留策略。相关细节可以参考 [[06_Agent短期记忆]]。
+`InMemorySaver` 适合学习和本地实验。生产环境应使用持久化 checkpointer，并设计用户归属、权限校验、历史清理和数据保留策略。相关细节可以参考 [06_Agent短期记忆](<06_Agent短期记忆.md>)。
 
 ## state_schema、context_schema、config 和 store 的区别
 
@@ -350,12 +350,12 @@ response["structured_response"]
 
 ## 相关学习笔记
 
-- [[04_Tools与FunctionCalling]]：理解 `tools`、工具调用和工具结果回传。
-- [[03_结构化输出]]：理解 `response_format` 和 `structured_response`。
-- [[14_ToolStrategy详解]]：理解工具调用路线的结构化输出。
-- [[15_ProviderStrategy详解]]：理解 Provider 原生结构化输出。
-- [[06_Agent短期记忆]]：理解 `checkpointer`、`thread_id` 和线程状态。
-- [[07_模型请求与响应结构]]：观察 `create_agent()` 执行后返回的完整 Agent state。
-- [[10_ChatOpenAI对象详解]]：理解传给 `model` 的 Chat Model 实例。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解 `tools`、工具调用和工具结果回传。
+- [03_结构化输出](<03_结构化输出.md>)：理解 `response_format` 和 `structured_response`。
+- [14_ToolStrategy详解](<14_ToolStrategy详解.md>)：理解工具调用路线的结构化输出。
+- [15_ProviderStrategy详解](<15_ProviderStrategy详解.md>)：理解 Provider 原生结构化输出。
+- [06_Agent短期记忆](<06_Agent短期记忆.md>)：理解 `checkpointer`、`thread_id` 和线程状态。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：观察 `create_agent()` 执行后返回的完整 Agent state。
+- [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)：理解传给 `model` 的 Chat Model 实例。
 
 **最终记忆：`create_agent()` 是 Agent harness 的装配入口；`model` 负责推理，`tools` 提供动作，`system_prompt` 设置规则，`response_format` 约束最终结果，`context_schema` 注入本轮依赖，`checkpointer` 维护线程状态。**
