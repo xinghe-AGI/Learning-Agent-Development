@@ -100,7 +100,7 @@ llm_chat = ChatOpenAI(
 | `reasoning` | 配置 Responses API 的推理选项 | 只在相应 API、服务和模型支持时有效 |
 | `verbosity` | 调整支持模型的回答详略程度 | 不是通用模型参数，不能替代 Prompt 中的输出要求 |
 
-采样参数的组合、适用场景和实验方法见 [[02_模型采样参数与ChatOpenAI]]。这篇笔记只说明它们在 `ChatOpenAI` 对象中的位置。
+采样参数的组合、适用场景和实验方法见 [02_模型采样参数与ChatOpenAI](<02_模型采样参数与ChatOpenAI.md>)。这篇笔记只说明它们在 `ChatOpenAI` 对象中的位置。
 
 ### 超时、重试与请求可靠性
 
@@ -210,7 +210,7 @@ llm_with_tools = llm.bind_tools(
 response = llm_with_tools.invoke("深圳今天的天气怎么样？")
 ```
 
-模型返回的 `tool_calls` 只是工具调用意图，真正执行 Python 函数的是业务代码或 Agent runtime。详见 [[04_Tools与FunctionCalling]]。
+模型返回的 `tool_calls` 只是工具调用意图，真正执行 Python 函数的是业务代码或 Agent runtime。详见 [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)。
 
 `input/messages`、`tools`、`tool_choice` 和结构化输出 Schema 都不应该一股脑写进 `ChatOpenAI` 构造函数：
 
@@ -240,7 +240,7 @@ print(response.response_metadata)
 | `usage_metadata` | 输入、输出和总 Token 用量 |
 | `response_metadata` | 模型名、finish reason、Provider 原始元数据等 |
 
-第三方兼容服务的非标准响应字段不一定会被 `ChatOpenAI` 完整保留。请求与响应对象的进一步拆解见 [[07_模型请求与响应结构]]。
+第三方兼容服务的非标准响应字段不一定会被 `ChatOpenAI` 完整保留。请求与响应对象的进一步拆解见 [07_模型请求与响应结构](<07_模型请求与响应结构.md>)。
 
 ## 一套够用的初始化思路
 
@@ -299,10 +299,10 @@ for field_name, field_info in ChatOpenAI.model_fields.items():
 
 ## 关联笔记
 
-- [[01_多厂商LLM集成与API协议]]：理解为什么当前项目能用一个 `ChatOpenAI` 连接多组 OpenAI-compatible 地址。
-- [[11_init_chat_model方法详解]]：理解统一工厂怎样选择 Provider、创建模型并支持运行时配置。
-- [[09_ChatOpenAI与init_chat_model的区别]]：比较直接创建具体类与使用模型工厂。
-- [[02_模型采样参数与ChatOpenAI]]：继续学习采样参数怎样影响生成。
-- [[07_模型请求与响应结构]]：理解消息输入、`AIMessage` 和响应元数据。
-- [[04_Tools与FunctionCalling]]：理解工具定义、工具调用意图和业务执行。
-- [[03_结构化输出]]：理解结构化输出策略与失败修复。
+- [01_多厂商LLM集成与API协议](<01_多厂商LLM集成与API协议.md>)：理解为什么当前项目能用一个 `ChatOpenAI` 连接多组 OpenAI-compatible 地址。
+- [11_init_chat_model方法详解](<11_init_chat_model方法详解.md>)：理解统一工厂怎样选择 Provider、创建模型并支持运行时配置。
+- [09_ChatOpenAI与init_chat_model的区别](<09_ChatOpenAI与init_chat_model的区别.md>)：比较直接创建具体类与使用模型工厂。
+- [02_模型采样参数与ChatOpenAI](<02_模型采样参数与ChatOpenAI.md>)：继续学习采样参数怎样影响生成。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：理解消息输入、`AIMessage` 和响应元数据。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解工具定义、工具调用意图和业务执行。
+- [03_结构化输出](<03_结构化输出.md>)：理解结构化输出策略与失败修复。

@@ -62,5 +62,5 @@ factory_model = init_chat_model(
 
 ## 关联笔记
 
-- [[10_ChatOpenAI对象详解]]：单独理解 `ChatOpenAI` 的构造参数和调用边界。
-- [[11_init_chat_model方法详解]]：理解工厂参数、Provider 映射、固定模式和运行时配置。
+- [10_ChatOpenAI对象详解](<10_ChatOpenAI对象详解.md>)：单独理解 `ChatOpenAI` 的构造参数和调用边界。
+- [11_init_chat_model方法详解](<11_init_chat_model方法详解.md>)：理解工厂参数、Provider 映射、固定模式和运行时配置。

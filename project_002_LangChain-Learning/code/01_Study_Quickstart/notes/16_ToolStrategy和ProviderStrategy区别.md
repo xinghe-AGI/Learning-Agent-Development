@@ -104,7 +104,7 @@ response_format=WeatherResponseFormat
 
 ## 和其他笔记的关系
 
-- [[14_ToolStrategy详解]]：理解工具调用路线的参数、消息和错误处理。
-- [[15_ProviderStrategy详解]]：理解 Provider 原生结构化输出路线。
-- [[17_结构化输出失败原因与处理]]：按照失败层级排查两种策略的异常。
-- [[13_OpenAI API结构化输出]]：理解 ProviderStrategy 背后的底层 API 能力。
+- [14_ToolStrategy详解](<14_ToolStrategy详解.md>)：理解工具调用路线的参数、消息和错误处理。
+- [15_ProviderStrategy详解](<15_ProviderStrategy详解.md>)：理解 Provider 原生结构化输出路线。
+- [17_结构化输出失败原因与处理](<17_结构化输出失败原因与处理.md>)：按照失败层级排查两种策略的异常。
+- [13_OpenAI API结构化输出](<13_OpenAI API结构化输出.md>)：理解 ProviderStrategy 背后的底层 API 能力。

@@ -174,9 +174,9 @@ WeatherResponseFormat(
 4. 模型按选定路线提交符合该结构的字段。
 5. LangChain 解析和校验结果，并把 `WeatherResponseFormat` 实例放入 `response["structured_response"]`。
 
-这条完整调用链以及它与 `ProviderStrategy`、JSON Mode 的区别，见 [[03_结构化输出]]。
+这条完整调用链以及它与 `ProviderStrategy`、JSON Mode 的区别，见 [03_结构化输出](<03_结构化输出.md>)。
 
-如果需要把当前 dataclass Schema 升级为生产中更常用的 Pydantic `BaseModel`，可以参考 [[18_Pydantic增强Schema与dataclass区别]]。
+如果需要把当前 dataclass Schema 升级为生产中更常用的 Pydantic `BaseModel`，可以参考 [18_Pydantic增强Schema与dataclass区别](<18_Pydantic增强Schema与dataclass区别.md>)。
 
 ## 常见误区
 
@@ -188,10 +188,10 @@ WeatherResponseFormat(
 
 ## 相关学习笔记
 
-- [[03_结构化输出]]：理解 Schema 怎样被 `ToolStrategy` 或 `ProviderStrategy` 使用。
-- [[18_Pydantic增强Schema与dataclass区别]]：比较 dataclass 与 Pydantic 在 Schema 表达、字段描述和校验能力上的差异。
-- [[04_Tools与FunctionCalling]]：理解工具参数 Schema、工具调用意图与真实函数执行。
-- [[05_create_agent参数详解]]：理解 `response_format` 怎样进入 Agent 装配过程。
-- [[07_模型请求与响应结构]]：观察 Schema 对应的数据最终出现在哪些响应字段中。
+- [03_结构化输出](<03_结构化输出.md>)：理解 Schema 怎样被 `ToolStrategy` 或 `ProviderStrategy` 使用。
+- [18_Pydantic增强Schema与dataclass区别](<18_Pydantic增强Schema与dataclass区别.md>)：比较 dataclass 与 Pydantic 在 Schema 表达、字段描述和校验能力上的差异。
+- [04_Tools与FunctionCalling](<04_Tools与FunctionCalling.md>)：理解工具参数 Schema、工具调用意图与真实函数执行。
+- [05_create_agent参数详解](<05_create_agent参数详解.md>)：理解 `response_format` 怎样进入 Agent 装配过程。
+- [07_模型请求与响应结构](<07_模型请求与响应结构.md>)：观察 Schema 对应的数据最终出现在哪些响应字段中。
 
 **最终记忆：Schema 定义“数据应该长什么样”，数据实例表示“这一次实际长什么样”，校验负责比较二者；结构正确不等于内容真实。**
