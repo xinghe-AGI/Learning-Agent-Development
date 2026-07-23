@@ -1,0 +1,10 @@
+# 本机模型配置、SQLite 历史记录与运行产物
+code/.env
+code/data/*.db
+code/logfile/*.log
+code/logfile/*.lock
+
+# Python 与测试缓存
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
